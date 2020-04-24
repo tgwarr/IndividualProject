@@ -8,6 +8,7 @@ public class Jump : MonoBehaviour
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
+	public bool gameOver = false;
     CharacterController controller;
     void Start()
     {
