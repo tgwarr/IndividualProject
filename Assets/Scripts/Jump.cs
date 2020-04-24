@@ -4,29 +4,47 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    public float speed = 6.0F;
-    public float jumpSpeed = 8.0F;
-    public float gravity = 20.0F;
-    private Vector3 moveDirection = Vector3.zero;
+	private Rigidbody playerRB;
+	public float moveSpeed;
+	public float forceMultiplier;
+	public float gravityMultiplier;
+	public bool onGround = true;
 	public bool gameOver = false;
-    CharacterController controller;
-    void Start()
-    {
-        controller = GetComponent<CharacterController>();
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
+		playerRB= GetComponent<Rigidbody>();
+		Physics.gravity *= gravityMultiplier;
+	}
 
-    void Update()
-    {
-        if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= speed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+	// Update is called once per frame
+	void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space) && onGround && !gameOver)
+		{
+			playerRB.AddForce(Vector3.up * forceMultiplier, ForceMode.Impulse);
+			onGround = false;
+		}
+			
+	}
 
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
-    }
+	private void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject.CompareTag("Obstacle"))
+		{
+			gameOver = true;
+			Debug.Log("Game Over!");
+		}
+		else if(collision.gameObject.CompareTag("platform") && !gameOver)
+		{
+			onGround = true;
+		}
+	}
+
+	private void Move()
+	{
+		Vector3 Movement = new Vector3 (Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+		playerRB.transform.position += Movement * moveSpeed * Time.deltaTime;
+	}
 }

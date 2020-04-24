@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8558540964228729458}
   - component: {fileID: -1008686738985070715}
   - component: {fileID: 4511334659241645466}
-  - component: {fileID: 4496870017514124049}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5933771535714504081}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,18 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9a081a0947edf4f8b7641ca7cb0cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 8
-  gravity: 7.5
---- !u!114 &4496870017514124049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5933771535714504081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ecd32d6d4f91e479e1e8ea52894d7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  forceMultiplier: 5
+  gravityMultiplier: 5
+  onGround: 1
+  gameOver: 0
