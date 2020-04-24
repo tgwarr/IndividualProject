@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleSpawn : MonoBehaviour
 {
 	private const float spawnPointX = 100;
-	private const float yRange = 5;
+	private const float yRange = 10;
 	private const float spawnPointZ = 10;
 	private const float spawnPointZ2 = 30;
 	private const float spawnPointZ3 = 50;
@@ -13,7 +13,7 @@ public class ObstacleSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		InvokeRepeating("SpawnObstacles", 1.0f, 1.0f);
+		InvokeRepeating("SpawnObstacles", 1.0f, 0.5f);
     }
 
     // Update is called once per frame

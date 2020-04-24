@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+	public ParticleSystem explosion;
 	public AudioClip explosion_01;
 	public AudioClip hit_01;
 	public AudioClip jump_01;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if(collision.gameObject.CompareTag("Obstacle"))
 		{
+			explosion.Play();
 			audioSource.PlayOneShot(explosion_01, 1.0f);
 			gameOver = true;
 			Debug.Log("Game Over!");
