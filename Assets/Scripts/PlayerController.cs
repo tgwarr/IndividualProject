@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 	public AudioClip jump_01;
 	private AudioSource audioSource;
 	private Rigidbody playerRB;
+	private Animator playerAnimator;
 	public float moveSpeed;
 	public float forceMultiplier;
 	public float gravityMultiplier;
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		playerAnimator = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource>();
 		playerRB= GetComponent<Rigidbody>();
 		Physics.gravity *= gravityMultiplier;
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if(collision.gameObject.CompareTag("Obstacle"))
 		{
+			playerAnimator.SetBool("PlayerDeath", true);
 			explosion.Play();
 			audioSource.PlayOneShot(explosion_01, 1.0f);
 			gameOver = true;
