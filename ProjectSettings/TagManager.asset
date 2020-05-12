@@ -6,6 +6,10 @@ TagManager:
   tags:
   - platform
   - Obstacle
+  - platform1
+  - platform2
+  - platform3
+  - movingplatform
   layers:
   - Default
   - TransparentFX

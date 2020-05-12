@@ -54,6 +54,11 @@ public class PlayerController : MonoBehaviour
 			onGround = true;
 			audioSource.PlayOneShot(hit_01, 1.0f);
 		}
+		else if(collision.gameObject.CompareTag("movingplatform") && !gameOver)
+		{
+			onGround = true;
+			audioSource.PlayOneShot(hit_01, 1.0f);
+		}
 	}
 }
 
