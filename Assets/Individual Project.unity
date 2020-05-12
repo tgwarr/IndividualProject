@@ -140,7 +140,7 @@ PrefabInstance:
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
@@ -218,7 +218,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: 0, z: 0}
   currentState: 
   smooth: 0.5
-  resetTime: 2
+  resetTime: 5
 --- !u!114 &534529720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +263,7 @@ PrefabInstance:
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
@@ -1196,8 +1196,8 @@ MonoBehaviour:
   position2: {fileID: 1192735999}
   newPosition: {x: 0, y: 0, z: 0}
   currentState: 
-  smooth: 0.5
-  resetTime: 2
+  smooth: 0.7
+  resetTime: 3
 --- !u!114 &2014021882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   position2: {fileID: 1813710383}
   newPosition: {x: 0, y: 0, z: 0}
   currentState: 
-  smooth: 0.5
+  smooth: 1
   resetTime: 2
 --- !u!114 &2073001210
 MonoBehaviour:
@@ -1720,7 +1720,7 @@ PrefabInstance:
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
         type: 3}
