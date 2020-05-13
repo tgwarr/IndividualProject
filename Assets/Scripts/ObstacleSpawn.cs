@@ -13,7 +13,7 @@ public class ObstacleSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		InvokeRepeating("SpawnObstacles", 1.0f, 0.5f);
+		InvokeRepeating("SpawnObstacles", 1.0f, 2.5f);
     }
 
     // Update is called once per frame
@@ -26,7 +26,13 @@ public class ObstacleSpawn : MonoBehaviour
 	{
 		int randomSpawn = Random.Range(0, Obstacles.Length);
 		Instantiate(Obstacles[randomSpawn], new Vector3(spawnPointX, Random.Range(-yRange, yRange), spawnPointZ), Obstacles[randomSpawn].transform.rotation);
-		Instantiate(Obstacles[randomSpawn], new Vector3(spawnPointX, Random.Range(-yRange, yRange), spawnPointZ2), Obstacles[randomSpawn].transform.rotation);
+		for(int rocketCount = 0; rocketCount < 2; rocketCount++)
+		{
+			Instantiate(Obstacles[randomSpawn], new Vector3(spawnPointX, Random.Range(-yRange, yRange), spawnPointZ2), Obstacles[randomSpawn].transform.rotation);
+		}
+		for(int rocketCount = 0; rocketCount < 3; rocketCount++)
+		{
 		Instantiate(Obstacles[randomSpawn], new Vector3(spawnPointX, Random.Range(-yRange, yRange), spawnPointZ3), Obstacles[randomSpawn].transform.rotation);
+		}
 	}
 }

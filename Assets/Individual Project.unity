@@ -219,18 +219,6 @@ MonoBehaviour:
   currentState: 
   smooth: 0.5
   resetTime: 5
---- !u!114 &534529720
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534529718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1da450bf2aa0e4ea4a86c9c71ed92f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &534529722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
@@ -549,6 +537,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &911866086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911866078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1da450bf2aa0e4ea4a86c9c71ed92f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1164613907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,18 +1216,6 @@ MonoBehaviour:
   currentState: 
   smooth: 0.7
   resetTime: 3
---- !u!114 &2014021882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014021880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1da450bf2aa0e4ea4a86c9c71ed92f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2014021884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,
@@ -1259,18 +1247,6 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 2
---- !u!114 &2073001210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2073001208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1da450bf2aa0e4ea4a86c9c71ed92f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2073001212 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8641540771856265474, guid: 8afff4785c7f8654d9d6816268d31471,

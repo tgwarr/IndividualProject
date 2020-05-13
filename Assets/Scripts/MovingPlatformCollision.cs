@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class MovingPlatformCollision : MonoBehaviour
 {
-	void OnTriggerEnter(Collider other)
+	void OnCollisionEnter(Collision other)
 	{
-		other.transform.parent = gameObject.transform;
+		if(other.gameObject.tag == "movingplatform")
+		{
+			gameObject.transform.parent = other.gameObject.transform;
+		}
 	}
 
-	void OnTriggerExit(Collider other)
+	void OnCollisionExit(Collision other)
 	{
-		other.transform.parent = null;
+		gameObject.transform.parent = null;
 	}
 }
