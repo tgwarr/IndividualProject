@@ -1575,6 +1575,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 4451962575721655818, guid: 66c64d8c901ccb44284d12cfc7f151f6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4451962575721655819, guid: 66c64d8c901ccb44284d12cfc7f151f6,
         type: 3}
       propertyPath: SpawnPoint
