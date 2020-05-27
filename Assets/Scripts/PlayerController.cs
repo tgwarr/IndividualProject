@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+	
+
 	public ParticleSystem explosion;
 	public AudioClip explosion_01;
 	public AudioClip hit_01;
@@ -16,9 +21,11 @@ public class PlayerController : MonoBehaviour
 	public float gravityMultiplier;
 	public bool onGround = true;
 	public bool gameOver = false;
+	private EventManager eventManager;
 	// Start is called before the first frame update
 	void Start()
 	{
+		eventManager = GameObject.Find("EventManager").GetComponent<EventManager>();
 		playerAnimator = GetComponent<Animator>();
 		audioSource = GetComponent<AudioSource>();
 		playerRB= GetComponent<Rigidbody>();
@@ -47,7 +54,7 @@ public class PlayerController : MonoBehaviour
 			explosion.Play();
 			audioSource.PlayOneShot(explosion_01, 1.0f);
 			gameOver = true;
-			Debug.Log("Game Over!");
+			eventManager.gameOverEvent?.Invoke();
 		}
 		else if(collision.gameObject.CompareTag("platform") && !gameOver)
 		{
@@ -60,6 +67,8 @@ public class PlayerController : MonoBehaviour
 			audioSource.PlayOneShot(hit_01, 1.0f);
 		}
 	}
+
+
 }
 
 
