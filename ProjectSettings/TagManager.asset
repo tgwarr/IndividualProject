@@ -10,6 +10,8 @@ TagManager:
   - platform2
   - platform3
   - movingplatform
+  - endplatform
+  - destroy
   layers:
   - Default
   - TransparentFX

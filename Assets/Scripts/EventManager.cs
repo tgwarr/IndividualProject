@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class EventManager : MonoBehaviour
 {
 	public UnityEvent gameOverEvent;
-	[System.Serializable] public class StartGameEvent : UnityEvent<int> { }
-	public StartGameEvent startGameEvent;
+	public UnityEvent startGameEvent;
+	public UnityEvent youWinEvent;
 
 }

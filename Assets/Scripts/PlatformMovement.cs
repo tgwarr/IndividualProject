@@ -11,13 +11,13 @@ public class PlatformMovement : MonoBehaviour
 	public string currentState;
 	public float smooth;
 	public float resetTime;
-    // Start is called before the first frame update
+    
     void Start()
     {
 		ChangeTarget();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
 		movingPlatform.position = Vector3.Lerp (movingPlatform.position, newPosition, smooth * Time.deltaTime);
